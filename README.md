@@ -6,15 +6,15 @@ Screencast available on Youtube
 https://www.youtube.com/watch?v=nXI7dDBNQcI&ab_channel=LipChuanSui
 
 
-![My Image](images/sys1.png)
-![My Image](images/sys2.png)
-![My Image](images/sys3.png)
-![My Image](images/sys4.png)
-![My Image](images/sys5.png)
-![My Image](images/sys6.png)
-![My Image](images/sys7.png)
-![My Image](images/sys8.png)
-![My Image](images/sys9.png)
+![My Image](image/sys1.png)
+![My Image](image/sys2.png)
+![My Image](image/sys3.png)
+![My Image](image/sys4.png)
+![My Image](image/sys5.png)
+![My Image](image/sys6.png)
+![My Image](image/sys7.png)
+![My Image](image/sys8.png)
+![My Image](image/sys9.png)
 
 
 
