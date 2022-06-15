@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--all this color are choosen according to the material design guidelines,
+i used Material palette generator in the website to find suitable secondary color for green, which is green,
+then i use color tool to determine variant color which are dark and light to both primary and secondary color-->
+<resources>
+    <color name="colorPrimary">#43a047</color>
+    <color name="colorPrimaryLight">#76d275</color>
+    <color name="colorPrimaryDark">#00701a</color>
+
+    <color name="colorSecondary">#ab47bc</color>
+    <color name="colorSecondaryLight">#df78ef</color>
+    <color name="colorSecondaryDark">#790e8b</color>
+
+    <color name="colorBackground">#ffffff</color>
+
+    <color name="colorAccent">#ab47bc</color>
+</resources>

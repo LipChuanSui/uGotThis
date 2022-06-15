@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Linear layout is used because all children are aligned in single direction-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".LoginActivity"
+    android:orientation="vertical">
+
+
+    <!--The title of the app with big font size and use primary color-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="uGotThis"
+        android:textSize="50dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/colorPrimary"/>
+
+    <!--icon of the app which consist of both primary color and secondary color-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/icon"
+        android:padding="20dp"
+        />
+
+    <!--Using TextInputEditText instead of an EditText provides accessibility support for the text field and
+    allows TextInputLayout greater control over the visual aspects of the text field.-->
+    <!--focusable input is added for user ease-->
+    <!--Input username-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Username"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="20sp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--Input password-->
+    <!--user could toggle password to be visible, this is helpful for elderly people-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:passwordToggleEnabled="true"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Password"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:textSize="20sp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Input photo and video-->
+    <!--every button is designed with big font to ensure user have no problem reading-->
+    <!--text color is white instead of black to read easier-->
+    <!--Rounded button is for design-->
+    <!--you could find xml for button in drawable/button_rounded-->
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_rounded"
+        android:text="Login"
+        android:textColor="#ffffff"
+
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/dir_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_rounded"
+        android:text="Register"
+        android:textColor="#ffffff"
+
+        android:textSize="22sp" />
+
+</LinearLayout>

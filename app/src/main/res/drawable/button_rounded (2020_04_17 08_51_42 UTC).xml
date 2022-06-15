@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--this xml is the rounded button used throughout the app,
+secondary color is used-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+<solid
+    android:color="@color/colorSecondary"
+    />
+
+    <corners
+        android:radius="25dp"
+        />
+</shape>

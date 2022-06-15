@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--relative layout is used because i have to set recyclerView relative above of bottom button so they wont overlapping-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+        <!--recyclerView is used because It solves the problem by “Recycling” the views as they scroll of
+         screen, so they can be used again. This greatly improves performance-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/dir_task"
+            android:layout_alignParentTop="true"/>
+
+
+        <!--button is added instead of floating action button below because checkbox for
+        completing task is added on the left, to prevent overlapping button is added to the bottom
+        without being overlapping because relative layout is used,
+        button is set to full width becasue rounded button seems weird -->
+        <Button
+            android:id="@+id/dir_task"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorSecondary"
+            android:text="Add new task"
+            android:textColor="#ffffff"
+
+            android:layout_alignParentBottom="true"
+            android:textSize="22sp" />
+
+        <!--<ImageView
+            android:id="@+id/add_left_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginRight="12dp"
+            android:elevation="2dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_add_circle_outline_black_50dp" />-->
+
+
+
+</RelativeLayout>

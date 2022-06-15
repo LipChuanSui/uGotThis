@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--relative layout is used because the children are positioned relative to each other-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:padding="6dip"
+    android:layout_marginBottom="5dp"
+
+    >
+
+    <!--customized checkbox with two image for checked and unchecked to make it more attractive-->
+    <!--the checkbox use secondary color-->
+    <!--original checkbox is set to transparent-->
+    <!--you could find xml file for checkbox image at drawable/check_rounded-->
+    <CheckBox
+        android:id="@+id/check_task"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/check_rounded"
+        android:layout_centerVertical="true"
+        android:buttonTint="@android:color/transparent"
+        />
+
+    <!---edit button is added with icon instead of words is to appeal more attractive,
+    color used is secondary color, positon is to the left of checkbox-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_btn"
+        android:layout_toLeftOf="@id/check_task"
+        android:drawableRight="@drawable/ic_edit_black_24dp"
+        android:background="@android:color/transparent"
+        >
+
+    </Button>
+
+    <!--position is added to the left of edit btn,
+    this line represent task and align top -->
+
+    <TextView
+        android:id="@+id/firstLine"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/secondLine"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_toLeftOf="@id/edit_btn"
+        android:gravity="center_vertical"
+        android:text="Example application"
+        android:textSize="20sp" />
+
+    <!--position is added to the left of edit btn,
+    this line represent date ad align bottom,
+    text of date is hardcoded here for example purpose-->
+    <TextView
+        android:id="@+id/secondLine"
+        android:layout_width="fill_parent"
+        android:layout_height="26dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/edit_btn"
+        android:ellipsize="marquee"
+        android:text="6/12/2019"
+        android:textSize="18sp"
+        android:singleLine="true" />
+</RelativeLayout>

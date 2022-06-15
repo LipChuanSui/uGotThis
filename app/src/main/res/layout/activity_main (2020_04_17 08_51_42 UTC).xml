@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Linear layout is used because all children are aligned in single direction-->
+<!--padding is added to position the context of app to center of activity for user ease-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:paddingTop="60dp"
+    android:paddingRight="25dp"
+    android:paddingLeft="25dp"
+
+    >
+                <!--parent layout for all 3 linear layout-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <!--parent layout for 1st cardview-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+
+
+                        <!---card view is the best choice of displaying a list of horizontal items -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+
+                            >
+
+                            <!--Relative layout is used to displays child views in relative positions -->
+                            <!--date is located below task name while both textview is located to the left of checkbox-->
+                            <!---you could find xml file for border, border also use secondary color-->
+                            <RelativeLayout
+                                android:background="@drawable/border"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/task_home"
+                                android:paddingTop="20dp"
+                                >
+
+                                <!--customized checkbox with two image for checked and unchecked to make it more attractive-->
+                                <!--the checkbox use secondary color-->
+                                <!--original checkbox is set to transparent-->
+                                <!--you could find xml file for checkbox image at drawable/check_rounded-->
+                                <CheckBox
+                                    android:id="@+id/check_task_home"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:background="@drawable/check_rounded"
+                                    android:layout_centerVertical="true"
+                                    android:buttonTint="@android:color/transparent"
+                                    android:layout_marginRight="20dp"
+                                    />
+
+                                <!--this task display nearest task which is about to expire-->
+                                <!--padding is added to make text appear in the middle to read easily-->
+                                <TextView
+                                    android:id="@+id/firstLine_home"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_toLeftOf="@id/check_task_home"
+                                    android:gravity="center_vertical"
+                                    android:text="Next Task: Birthday"
+                                    android:textSize="25sp" />
+
+                                <TextView
+                                    android:id="@+id/secondLine_home"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_below="@+id/firstLine_home"
+                                    android:layout_toLeftOf="@id/check_task_home"
+                                    android:ellipsize="marquee"
+                                    android:text="6/12/2019"
+                                    android:textSize="20sp"
+                                    android:singleLine="true"
+                                    android:layout_marginLeft="20dp"/>
+
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                    <!--second and third card views are fixed same size for tidiness -->
+                    <!--icon is added at left while text is added at right-->
+                    <!-- padding is added to make sure icon and text are located center to read easily-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/border"
+                        >
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            >
+
+                            <!---relative layout is used to place text relative to the right of icon-->
+                            <!---button width and height is set to match parent so that user could just click on the card view-->
+                            <!---this provide a large amount of space to click, button is set transparent toavoid overlapping-->
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:src="@drawable/task"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:foregroundGravity="center"
+                                    android:layout_marginLeft="20dp"
+                                    android:id="@+id/imageView1"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="To Do List"
+                                    android:textSize="25sp"
+                                    android:layout_toRightOf="@+id/imageView1"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:gravity="center"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginBottom="10dp"/>
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/task_btn"
+                                    android:background="@android:color/transparent"/>
+
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/border"
+                        >
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+
+
+
+                            >
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:src="@drawable/add"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:foregroundGravity="center"
+                                    android:layout_marginLeft="30dp"
+                                    android:id="@+id/imageView2"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Add New Task"
+                                    android:textSize="25sp"
+                                    android:layout_toRightOf="@+id/imageView2"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:gravity="center"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginBottom="10dp"/>
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/add_btn"
+                                    android:background="@android:color/transparent"/>
+
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+</LinearLayout>

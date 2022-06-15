@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!--Linear layout is used because all children are aligned in single direction-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    android:padding="30dp"
+    tools:context=".SignupActivity">
+
+    <!--Using TextInputEditText instead of an EditText provides accessibility support for the text field and
+    allows TextInputLayout greater control over the visual aspects of the text field.-->
+    <!--focusable input is added for user ease-->
+    <!--Input task-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+
+
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Task"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="20sp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Input date-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Date"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:textSize="20sp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Input photo and video-->
+    <!--every button is designed with big font to ensure user have no problem reading-->
+    <!--text color is white instead of black to read easier-->
+    <!--Rounded button is for design-->
+    <!--you could find xml for button in drawable/button_rounded-->
+    <Button
+        android:id="@+id/image_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_rounded"
+        android:text="Add Photo &amp; Video Library"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="20dp"
+
+        />
+
+    <!--Input location-->
+    <Button
+        android:id="@+id/location_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_rounded"
+        android:text="Add Location"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+
+        android:paddingLeft="20dp"
+        />
+
+
+    <!--Create new task-->
+    <Button
+        android:id="@+id/add_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_rounded"
+        android:text="Create"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        />
+</LinearLayout>
